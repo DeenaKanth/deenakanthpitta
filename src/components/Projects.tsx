@@ -16,39 +16,39 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-gray-900">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Featured Projects</h2>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Innovative solutions combining AI, analytics, and business intelligence
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all hover:-translate-y-1">
+            <div key={index} className="bg-gray-800 border border-gray-700 rounded-xl shadow-lg p-8 hover:shadow-xl hover:border-gray-600 transition-all hover:-translate-y-1">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{project.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{project.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{project.description}</p>
                 </div>
 
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-700 mb-3 uppercase tracking-wide">Tech Stack</h4>
+                  <h4 className="text-sm font-semibold text-gray-300 mb-3 uppercase tracking-wide">Tech Stack</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.techStack.map((tech, techIndex) => (
-                      <span key={techIndex} className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">
+                      <span key={techIndex} className="bg-red-900/30 text-red-300 border border-red-500/30 px-3 py-1 rounded-full text-sm font-medium">
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-gray-200">
+                <div className="pt-4 border-t border-gray-700">
                   <div className="flex items-center space-x-2">
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span className="text-green-600 font-semibold text-sm">{project.impact}</span>
+                    <span className="text-green-400 font-semibold text-sm">{project.impact}</span>
                   </div>
                 </div>
               </div>
