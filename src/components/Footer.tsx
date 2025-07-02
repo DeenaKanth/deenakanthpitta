@@ -1,14 +1,13 @@
-
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <footer className="bg-gray-900 text-white py-12">
+  return <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8">
           <div className="space-y-4">
@@ -26,15 +25,9 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold">Quick Links</h3>
             <div className="space-y-2">
-              {["About", "Experience", "Projects", "Skills", "Contact"].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
-                  className="block text-gray-400 hover:text-white transition-colors text-sm"
-                >
+              {["About", "Experience", "Projects", "Skills", "Contact"].map(item => <button key={item} onClick={() => scrollToSection(item.toLowerCase())} className="block text-gray-400 hover:text-white transition-colors text-sm">
                   {item}
-                </button>
-              ))}
+                </button>)}
             </div>
           </div>
 
@@ -44,10 +37,7 @@ const Footer = () => {
               <p className="text-gray-400">pittadeenakanth@gmail.com</p>
               <p className="text-gray-400">(945) 274-5002</p>
               <p className="text-gray-400">Houston, TX</p>
-              <a 
-                href="https://linkedin.com/in/deena-kanth-pitta" 
-                className="text-blue-400 hover:text-blue-300 transition-colors block"
-              >
+              <a href="https://linkedin.com/in/deena-kanth-pitta" className="text-blue-400 hover:text-blue-300 transition-colors block">
                 LinkedIn Profile
               </a>
             </div>
@@ -60,8 +50,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

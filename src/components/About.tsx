@@ -1,18 +1,12 @@
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 bg-gray-900">
+  return <section id="about" className="py-20 bg-gray-900">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-white">About Me</h2>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                I'm Deena Kanth Pitta, a passionate Business Analytics and AI professional currently pursuing my Master's degree at UT Dallas. With a strong foundation in Mechanical Engineering from NIT Warangal and hands-on industry experience, I bring a unique perspective to data-driven decision making.
-              </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                My expertise lies in demand forecasting, supply chain operations, and developing intelligent solutions that drive business growth. I've successfully managed multi-million dollar forecasting projects and built AI systems that improve operational efficiency.
-              </p>
+              <p className="text-lg text-gray-300 leading-relaxed">I'm Deena Kanth Pitta, a passionate Business Analytics and AI professional who recently graduated with a Master's degree from UT Dallas. </p>
+              <p className="text-lg text-gray-300 leading-relaxed">With a strong foundation in data analytics and a keen interest in intelligent business solutions, my expertise spans demand planning, supply planning, s&op planning, supply chain optimization, and KPI-driven performance enhancement. I’ve led high-impact forecasting projects for multi-million dollar clients and developed AI-powered systems that have significantly improved operational efficiency. My goal is to transform complex data into actionable insights that support strategic decision-making and drive measurable business outcomes.</p>
             </div>
           </div>
 
@@ -46,8 +40,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
