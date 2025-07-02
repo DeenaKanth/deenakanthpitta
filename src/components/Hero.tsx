@@ -47,7 +47,7 @@ const Hero = () => {
                 <span className="text-red-500">
               </span> I'm Deena
                 <span className="block text-4xl lg:text-5xl text-gray-300 font-medium mt-3">Business Analytics & AI Graduate</span>
-                <span className="block text-4xl lg:text-5xl text-gray-300 font-medium">Seeking Opportunities to Innovate</span>
+                
               </h1>
             </div>
             
