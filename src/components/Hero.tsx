@@ -1,4 +1,3 @@
-
 import { ArrowDown, Sparkles, Star, Download } from "lucide-react";
 
 const Hero = () => {
@@ -98,7 +97,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Enhanced profile section with stats */}
+        {/* Enhanced profile section */}
         <div className="relative animate-fade-in delay-300">
           {/* Profile Image with decorative background */}
           <div className="relative z-10 max-w-md mx-auto">
@@ -111,18 +110,6 @@ const Hero = () => {
                 <div className="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center mb-6 overflow-hidden relative">
                   <div className="relative w-32 h-32 bg-gradient-to-br from-blue-500 via-blue-600 to-teal-500 rounded-full flex items-center justify-center shadow-lg">
                     <span className="text-white text-4xl font-bold tracking-wide">DK</span>
-                  </div>
-                </div>
-                
-                {/* Stats */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-white">200+</div>
-                    <div className="text-sm text-gray-400">Projects Completed</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-white">50+</div>
-                    <div className="text-sm text-gray-400">Happy Clients</div>
                   </div>
                 </div>
                 
