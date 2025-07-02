@@ -44,7 +44,8 @@ const Hero = () => {
             {/* Enhanced typography with modern styling */}
             <div className="space-y-4">
               <h1 className="text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight">
-                <span className="text-red-500">Hello,</span> I'm Deena
+                <span className="text-red-500">
+              </span> I'm Deena
                 <span className="block text-4xl lg:text-5xl text-gray-300 font-medium mt-3">Business Analytics & AI Graduate</span>
                 <span className="block text-4xl lg:text-5xl text-gray-300 font-medium">Seeking Opportunities to Innovate</span>
               </h1>
