@@ -1,3 +1,4 @@
+
 import { ArrowDown, Sparkles, Star, Download } from "lucide-react";
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -8,6 +9,19 @@ const Hero = () => {
       });
     }
   };
+
+  const handleDownloadCV = () => {
+    window.open('https://drive.google.com/file/d/1JyeRGzUG3Fhs2_22rDmr4eT8YpFS9Wt3/view?usp=sharing', '_blank');
+  };
+
+  const handleLinkedInClick = () => {
+    window.open('https://www.linkedin.com/in/deena-kanth-pitta/', '_blank');
+  };
+
+  const handleGitHubClick = () => {
+    window.open('https://github.com/DeenaKanth/', '_blank');
+  };
+
   return <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gray-900">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -64,7 +78,7 @@ const Hero = () => {
             <button onClick={() => scrollToSection("projects")} className="group relative bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-all duration-300 hover:scale-105 shadow-lg">
               <span className="relative z-10">Hire Me</span>
             </button>
-            <button onClick={() => scrollToSection("contact")} className="group flex items-center gap-2 border border-gray-600 text-gray-300 px-8 py-4 rounded-lg font-semibold hover:border-gray-500 hover:text-white hover:bg-gray-800/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+            <button onClick={handleDownloadCV} className="group flex items-center gap-2 border border-gray-600 text-gray-300 px-8 py-4 rounded-lg font-semibold hover:border-gray-500 hover:text-white hover:bg-gray-800/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
               <Download className="w-4 h-4" />
               Download CV
             </button>
@@ -72,18 +86,18 @@ const Hero = () => {
 
           {/* Social Links */}
           <div className="flex items-center space-x-6 pt-8">
-            <div className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors cursor-pointer">
+            <button onClick={handleLinkedInClick} className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors cursor-pointer">
               <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center">
                 <span className="text-xs font-bold">Li</span>
               </div>
               <span className="text-sm">LinkedIn</span>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors cursor-pointer">
+            </button>
+            <button onClick={handleGitHubClick} className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors cursor-pointer">
               <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center">
                 <span className="text-xs font-bold">Git</span>
               </div>
               <span className="text-sm">See My Work</span>
-            </div>
+            </button>
           </div>
         </div>
 
@@ -98,25 +112,11 @@ const Hero = () => {
               {/* Profile image container */}
               <div className="relative bg-gray-800 rounded-3xl p-8 border border-gray-700">
                 <div className="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center mb-6 overflow-hidden relative">
-                  <div className="relative w-32 h-32 bg-gradient-to-br from-blue-500 via-blue-600 to-teal-500 rounded-full flex items-center justify-center shadow-lg">
-                    <span className="text-white text-4xl font-bold tracking-wide">DK</span>
-                  </div>
-                </div>
-                
-                {/* Stats */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-white">
-                  </div>
-                    <div className="text-sm text-gray-400">
-                  </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-white">
-                  </div>
-                    <div className="text-sm text-gray-400">
-                  </div>
-                  </div>
+                  <img 
+                    src="https://i.postimg.cc/CL1qkh6k/IMG-6940-Snapseed-Copy.jpg" 
+                    alt="Deena Kanth Pitta"
+                    className="w-full h-full object-cover rounded-2xl"
+                  />
                 </div>
                 
                 <div className="text-center space-y-2">
