@@ -1,5 +1,5 @@
-
 import { ArrowDown, Sparkles, Star, Download } from "lucide-react";
+
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -22,12 +22,13 @@ const Hero = () => {
     window.open('https://github.com/DeenaKanth/', '_blank');
   };
 
-  return <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gray-900">
+  return (
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gray-50">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-red-500/20 to-orange-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-purple-500/10 to-blue-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-teal-500/10 to-green-500/10 rounded-full blur-2xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-red-500/10 to-orange-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-purple-500/5 to-blue-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-teal-500/5 to-green-500/5 rounded-full blur-2xl"></div>
       </div>
 
       {/* Floating particles */}
@@ -47,7 +48,7 @@ const Hero = () => {
         <div className="space-y-8 animate-fade-in">
           <div className="space-y-6">
             {/* Status badge with enhanced styling */}
-            <div className="inline-flex items-center px-6 py-3 bg-gray-800/80 border border-gray-700 text-gray-300 rounded-full text-sm font-medium shadow-sm backdrop-blur-sm">
+            <div className="inline-flex items-center px-6 py-3 bg-white/80 border border-gray-200 text-gray-700 rounded-full text-sm font-medium shadow-sm backdrop-blur-sm">
               <span className="relative">
                 <span className="w-2 h-2 bg-green-500 rounded-full mr-3 animate-pulse"></span>
                 <span className="absolute w-2 h-2 bg-green-400 rounded-full mr-3 animate-ping"></span>
@@ -57,16 +58,14 @@ const Hero = () => {
             
             {/* Enhanced typography with modern styling */}
             <div className="space-y-4">
-              <h1 className="text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight">
-                <span className="text-red-500">
-              </span> I'm Deena
-                <span className="block text-4xl lg:text-5xl text-gray-300 font-medium mt-3">Business Analytics & AI Graduate</span>
-                
+              <h1 className="text-6xl lg:text-7xl font-bold text-gray-900 leading-tight tracking-tight">
+                I'm Deena
+                <span className="block text-4xl lg:text-5xl text-gray-600 font-medium mt-3">Business Analytics & AI Graduate</span>
               </h1>
             </div>
             
             <div className="space-y-4">
-              <p className="text-lg text-gray-400 leading-relaxed max-w-lg">
+              <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
                 A passionate Business Analytics graduate with hands-on experience 
                 who is always excited to work with you to create wonderful data-driven solutions!
               </p>
@@ -78,7 +77,7 @@ const Hero = () => {
             <button onClick={() => scrollToSection("projects")} className="group relative bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-all duration-300 hover:scale-105 shadow-lg">
               <span className="relative z-10">Hire Me</span>
             </button>
-            <button onClick={handleDownloadCV} className="group flex items-center gap-2 border border-gray-600 text-gray-300 px-8 py-4 rounded-lg font-semibold hover:border-gray-500 hover:text-white hover:bg-gray-800/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+            <button onClick={handleDownloadCV} className="group flex items-center gap-2 border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-gray-400 hover:text-gray-900 hover:bg-gray-50 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
               <Download className="w-4 h-4" />
               Download CV
             </button>
@@ -86,14 +85,14 @@ const Hero = () => {
 
           {/* Social Links */}
           <div className="flex items-center space-x-6 pt-8">
-            <button onClick={handleLinkedInClick} className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors cursor-pointer">
-              <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center">
+            <button onClick={handleLinkedInClick} className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors cursor-pointer">
+              <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
                 <span className="text-xs font-bold">Li</span>
               </div>
               <span className="text-sm">LinkedIn</span>
             </button>
-            <button onClick={handleGitHubClick} className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors cursor-pointer">
-              <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center">
+            <button onClick={handleGitHubClick} className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors cursor-pointer">
+              <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
                 <span className="text-xs font-bold">Git</span>
               </div>
               <span className="text-sm">See My Work</span>
@@ -110,8 +109,8 @@ const Hero = () => {
               <div className="absolute -inset-4 bg-red-600 rounded-3xl transform rotate-3"></div>
               
               {/* Profile image container */}
-              <div className="relative bg-gray-800 rounded-3xl p-8 border border-gray-700">
-                <div className="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center mb-6 overflow-hidden relative">
+              <div className="relative bg-white rounded-3xl p-8 border border-gray-200 shadow-lg">
+                <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center mb-6 overflow-hidden relative">
                   <img 
                     src="https://i.postimg.cc/CL1qkh6k/IMG-6940-Snapseed-Copy.jpg" 
                     alt="Deena Kanth Pitta"
@@ -120,9 +119,9 @@ const Hero = () => {
                 </div>
                 
                 <div className="text-center space-y-2">
-                  <h3 className="text-xl font-bold text-white">Deena Kanth Pitta</h3>
-                  <p className="text-red-400 font-semibold">Business Analytics & AI</p>
-                  <p className="text-gray-400 text-sm">UT Dallas Graduate Student</p>
+                  <h3 className="text-xl font-bold text-gray-900">Deena Kanth Pitta</h3>
+                  <p className="text-red-600 font-semibold">Business Analytics & AI</p>
+                  <p className="text-gray-600 text-sm">UT Dallas Graduate Student</p>
                 </div>
               </div>
             </div>
@@ -132,13 +131,15 @@ const Hero = () => {
 
       {/* Enhanced scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <button onClick={() => scrollToSection("about")} className="group flex flex-col items-center text-gray-400 hover:text-gray-300 transition-all duration-300 p-4 rounded-2xl hover:bg-gray-800/60 backdrop-blur-sm">
+        <button onClick={() => scrollToSection("about")} className="group flex flex-col items-center text-gray-600 hover:text-gray-700 transition-all duration-300 p-4 rounded-2xl hover:bg-white/60 backdrop-blur-sm">
           <span className="text-sm mb-2 font-medium">Scroll down</span>
           <div className="p-2 rounded-full border-2 border-current group-hover:scale-110 transition-transform duration-300">
             <ArrowDown className="w-4 h-4" />
           </div>
         </button>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
