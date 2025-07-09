@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -41,8 +42,8 @@ const Contact = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-red-50 border border-red-200 rounded-lg flex items-center justify-center">
-                  <span className="text-red-600 font-bold">📧</span>
+                <div className="w-12 h-12 bg-blue-50 border border-blue-200 rounded-lg flex items-center justify-center">
+                  <span className="text-blue-600 font-bold">📧</span>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Email</h3>
@@ -66,7 +67,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Location</h3>
-                  <p className="text-gray-700">Houston, TX</p>
+                  <p className="text-gray-700">Dallas, TX</p>
                 </div>
               </div>
 
@@ -76,7 +77,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">LinkedIn</h3>
-                  <a href="https://linkedin.com/in/deena-kanth-pitta" className="text-red-600 hover:text-red-500 hover:underline transition-colors">
+                  <a href="https://linkedin.com/in/deena-kanth-pitta" className="text-blue-600 hover:text-blue-500 hover:underline transition-colors">
                     linkedin.com/in/deena-kanth-pitta
                   </a>
                 </div>
@@ -102,7 +103,7 @@ const Contact = () => {
                   onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))} 
                   placeholder="Your full name" 
                   required 
-                  className="w-full bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-red-500" 
+                  className="w-full bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-blue-500" 
                 />
               </div>
 
@@ -117,7 +118,7 @@ const Contact = () => {
                   onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))} 
                   placeholder="your.email@example.com" 
                   required 
-                  className="w-full bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-red-500" 
+                  className="w-full bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-blue-500" 
                 />
               </div>
 
@@ -131,11 +132,11 @@ const Contact = () => {
                   onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))} 
                   placeholder="Tell me about your project or opportunity..." 
                   required 
-                  className="w-full h-32 bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-red-500" 
+                  className="w-full h-32 bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-blue-500" 
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-red-600 hover:bg-red-700 text-white border-0">
+              <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white border-0">
                 Send Message
               </Button>
             </form>

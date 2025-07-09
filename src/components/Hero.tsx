@@ -1,3 +1,4 @@
+
 import { ArrowDown, Sparkles, Star, Download } from "lucide-react";
 
 const Hero = () => {
@@ -26,7 +27,7 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gray-50">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-red-500/10 to-orange-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/10 to-blue-500/5 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-purple-500/5 to-blue-500/5 rounded-full blur-3xl"></div>
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-teal-500/5 to-green-500/5 rounded-full blur-2xl"></div>
       </div>
@@ -34,7 +35,7 @@ const Hero = () => {
       {/* Floating particles */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/5 animate-bounce delay-300">
-          <Sparkles className="w-4 h-4 text-red-400/60" />
+          <Sparkles className="w-4 h-4 text-blue-400/60" />
         </div>
         <div className="absolute top-1/3 right-1/4 animate-bounce delay-700">
           <Star className="w-3 h-3 text-orange-400/60" />
@@ -74,7 +75,7 @@ const Hero = () => {
 
           {/* Enhanced buttons with modern styling */}
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <button onClick={() => scrollToSection("projects")} className="group relative bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-all duration-300 hover:scale-105 shadow-lg">
+            <button onClick={() => scrollToSection("projects")} className="group relative bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg">
               <span className="relative z-10">Hire Me</span>
             </button>
             <button onClick={handleDownloadCV} className="group flex items-center gap-2 border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-gray-400 hover:text-gray-900 hover:bg-gray-50 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
@@ -85,14 +86,14 @@ const Hero = () => {
 
           {/* Social Links */}
           <div className="flex items-center space-x-6 pt-8">
-            <button onClick={handleLinkedInClick} className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors cursor-pointer">
-              <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+            <button onClick={handleLinkedInClick} className="group flex items-center gap-2 border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-gray-400 hover:text-gray-900 hover:bg-gray-50 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+              <div className="w-6 h-6 bg-gray-100 rounded-lg flex items-center justify-center">
                 <span className="text-xs font-bold">Li</span>
               </div>
               <span className="text-sm">LinkedIn</span>
             </button>
-            <button onClick={handleGitHubClick} className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors cursor-pointer">
-              <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+            <button onClick={handleGitHubClick} className="group flex items-center gap-2 border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-gray-400 hover:text-gray-900 hover:bg-gray-50 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+              <div className="w-6 h-6 bg-gray-100 rounded-lg flex items-center justify-center">
                 <span className="text-xs font-bold">Git</span>
               </div>
               <span className="text-sm">See My Work</span>
@@ -105,8 +106,8 @@ const Hero = () => {
           {/* Profile Image with decorative background */}
           <div className="relative z-10 max-w-md mx-auto">
             <div className="relative">
-              {/* Red decorative background */}
-              <div className="absolute -inset-4 bg-red-600 rounded-3xl transform rotate-3"></div>
+              {/* Blue decorative background */}
+              <div className="absolute -inset-4 bg-blue-600 rounded-3xl transform rotate-3"></div>
               
               {/* Profile image container */}
               <div className="relative bg-white rounded-3xl p-8 border border-gray-200 shadow-lg">
@@ -120,7 +121,7 @@ const Hero = () => {
                 
                 <div className="text-center space-y-2">
                   <h3 className="text-xl font-bold text-gray-900">Deena Kanth Pitta</h3>
-                  <p className="text-red-600 font-semibold">Business Analytics & AI</p>
+                  <p className="text-blue-600 font-semibold">Business Analytics & AI</p>
                   <p className="text-gray-600 text-sm">UT Dallas Graduate Student</p>
                 </div>
               </div>

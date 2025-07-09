@@ -47,7 +47,7 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-red-600 to-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">DK</span>
             </div>
             <span className="font-semibold text-gray-900">Deena Kanth Pitta</span>
@@ -58,8 +58,8 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium transition-colors hover:text-red-600 ${
-                  activeSection === item.id ? "text-red-600" : "text-gray-700"
+                className={`text-sm font-medium transition-colors hover:text-blue-600 ${
+                  activeSection === item.id ? "text-blue-600" : "text-gray-700"
                 }`}
               >
                 {item.label}
@@ -69,7 +69,7 @@ const Navigation = () => {
 
           <button
             onClick={() => scrollToSection("contact")}
-            className="bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-700 transition-colors"
+            className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
           >
             Get in Touch
           </button>
