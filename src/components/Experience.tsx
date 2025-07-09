@@ -1,14 +1,11 @@
-
 const Experience = () => {
   const experiences = [{
     title: "Student Worker",
-    company: "Chick-fil-A | Compass Group USA | UT Dallas",
+    company: "Chick-fil-A, Compass Group USA (UT Dallas)",
     location: "Dallas, TX", 
-    duration: "Feb 2024 – Apr 2025",
+    duration: "February 2024 – April 2025",
     responsibilities: [
-      "Assisted in managing daily inventory operations, reducing stock discrepancies by 15% through accurate logging and demand forecasting techniques",
-      "Collaborated with logistics team to streamline back-of-house supply flow, improving order fulfillment time by 20% during peak operational hours", 
-      "Analyzed weekly sales and waste data to identify operational trends, helping reduce food waste by 12% through optimized preparation planning and shelf-life tracking"
+      "Supported supply chain operations, managed inventory and logistics, improving order fulfillment by 20% and reducing stock discrepancies and food waste by over 10% through data-driven planning and forecasting."
     ]
   }, {
     title: "Business Operations Specialist",
