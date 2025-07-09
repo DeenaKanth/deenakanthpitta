@@ -36,7 +36,7 @@ const Footer = () => {
             <div className="space-y-2 text-sm">
               <p className="text-gray-400">pittadeenakanth@gmail.com</p>
               <p className="text-gray-400">(945) 274-5002</p>
-              <p className="text-gray-400">Houston, TX</p>
+              <p className="text-gray-400">Dallas, TX</p>
               <a href="https://linkedin.com/in/deena-kanth-pitta" className="text-blue-400 hover:text-blue-300 transition-colors block">
                 LinkedIn Profile
               </a>
