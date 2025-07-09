@@ -1,143 +1,105 @@
 
-import { ArrowDown, Sparkles, Star, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Download, Mail, Github, Linkedin } from "lucide-react";
 
 const Hero = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth"
-      });
-    }
-  };
-
-  const handleDownloadCV = () => {
-    window.open('https://drive.google.com/file/d/1JyeRGzUG3Fhs2_22rDmr4eT8YpFS9Wt3/view?usp=sharing', '_blank');
-  };
-
-  const handleLinkedInClick = () => {
-    window.open('https://www.linkedin.com/in/deena-kanth-pitta/', '_blank');
-  };
-
-  const handleGitHubClick = () => {
-    window.open('https://github.com/DeenaKanth/', '_blank');
-  };
-
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gray-50">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/10 to-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-purple-500/5 to-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-teal-500/5 to-green-500/5 rounded-full blur-2xl"></div>
-      </div>
-
-      {/* Floating particles */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/5 animate-bounce delay-300">
-          <Sparkles className="w-4 h-4 text-blue-400/60" />
-        </div>
-        <div className="absolute top-1/3 right-1/4 animate-bounce delay-700">
-          <Star className="w-3 h-3 text-orange-400/60" />
-        </div>
-        <div className="absolute bottom-1/3 left-1/3 animate-bounce delay-1000">
-          <Sparkles className="w-5 h-5 text-purple-400/60" />
-        </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-16 items-center relative z-10">
-        <div className="space-y-8 animate-fade-in">
-          <div className="space-y-6">
-            {/* Status badge with enhanced styling */}
-            <div className="inline-flex items-center px-6 py-3 bg-white/80 border border-gray-200 text-gray-700 rounded-full text-sm font-medium shadow-sm backdrop-blur-sm">
-              <span className="relative">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-3 animate-pulse"></span>
-                <span className="absolute w-2 h-2 bg-green-400 rounded-full mr-3 animate-ping"></span>
-              </span>
-              Available for opportunities
-            </div>
-            
-            {/* Enhanced typography with modern styling */}
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white pt-20">
+      <div className="max-w-6xl mx-auto px-6 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-6xl lg:text-7xl font-bold text-gray-900 leading-tight tracking-tight">
-                I'm Deena
-                <span className="block text-4xl lg:text-5xl text-gray-600 font-medium mt-3">Business Analytics & AI Graduate</span>
+              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                Hi, I'm{" "}
+                <span className="bg-gradient-to-r from-sky-500 to-sky-600 bg-clip-text text-transparent">
+                  Deena Kanth
+                </span>
               </h1>
-            </div>
-            
-            <div className="space-y-4">
-              <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-                A passionate Business Analytics graduate with hands-on experience 
-                who is always excited to work with you to create wonderful data-driven solutions!
+              <p className="text-xl text-gray-600 leading-relaxed">
+                Data Analytics Professional & Business Intelligence Specialist
+              </p>
+              <p className="text-lg text-gray-500 max-w-lg">
+                Transforming complex data into actionable insights with expertise in SQL, Python, Tableau, and Power BI. 
+                Passionate about driving data-driven decision making and business growth.
               </p>
             </div>
-          </div>
 
-          {/* Enhanced buttons with modern styling */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <button onClick={() => scrollToSection("projects")} className="group relative bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg">
-              <span className="relative z-10">Hire Me</span>
-            </button>
-            <button onClick={handleDownloadCV} className="group flex items-center gap-2 border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-gray-400 hover:text-gray-900 hover:bg-gray-50 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
-              <Download className="w-4 h-4" />
-              Download CV
-            </button>
-          </div>
-
-          {/* Social Links */}
-          <div className="flex items-center space-x-6 pt-8">
-            <button onClick={handleLinkedInClick} className="group flex items-center gap-2 border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-gray-400 hover:text-gray-900 hover:bg-gray-50 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
-              <div className="w-6 h-6 bg-gray-100 rounded-lg flex items-center justify-center">
-                <span className="text-xs font-bold">Li</span>
-              </div>
-              <span className="text-sm">LinkedIn</span>
-            </button>
-            <button onClick={handleGitHubClick} className="group flex items-center gap-2 border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-gray-400 hover:text-gray-900 hover:bg-gray-50 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
-              <div className="w-6 h-6 bg-gray-100 rounded-lg flex items-center justify-center">
-                <span className="text-xs font-bold">Git</span>
-              </div>
-              <span className="text-sm">See My Work</span>
-            </button>
-          </div>
-        </div>
-
-        {/* Enhanced profile section with stats */}
-        <div className="relative animate-fade-in delay-300">
-          {/* Profile Image with decorative background */}
-          <div className="relative z-10 max-w-md mx-auto">
-            <div className="relative">
-              {/* Blue decorative background */}
-              <div className="absolute -inset-4 bg-blue-600 rounded-3xl transform rotate-3"></div>
+            <div className="flex flex-wrap gap-4">
+              <Button 
+                className="bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-lg font-medium transition-colors border border-sky-500 hover:border-sky-600"
+                onClick={() => {
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                <Mail className="w-4 h-4 mr-2" />
+                Get in Touch
+              </Button>
               
-              {/* Profile image container */}
-              <div className="relative bg-white rounded-3xl p-8 border border-gray-200 shadow-lg">
-                <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center mb-6 overflow-hidden relative">
-                  <img 
-                    src="https://i.postimg.cc/CL1qkh6k/IMG-6940-Snapseed-Copy.jpg" 
-                    alt="Deena Kanth Pitta"
-                    className="w-full h-full object-cover rounded-2xl"
-                  />
-                </div>
-                
-                <div className="text-center space-y-2">
-                  <h3 className="text-xl font-bold text-gray-900">Deena Kanth Pitta</h3>
-                  <p className="text-blue-600 font-semibold">Business Analytics & AI</p>
-                  <p className="text-gray-600 text-sm">UT Dallas Graduate Student</p>
+              <Button 
+                variant="outline" 
+                className="px-6 py-3 rounded-lg font-medium border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-colors"
+                onClick={() => window.open('https://drive.google.com/file/d/1JyeRGzUG3Fhs2_22rDmr4eT8YpFS9Wt3/view?usp=sharing', '_blank')}
+              >  
+                <Download className="w-4 h-4 mr-2" />
+                Download CV
+              </Button>
+              
+              <Button 
+                variant="outline" 
+                className="px-6 py-3 rounded-lg font-medium border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-colors"
+                onClick={() => window.open('https://www.linkedin.com/in/deena-kanth-pitta/', '_blank')}
+              >
+                <Linkedin className="w-4 h-4 mr-2" />
+                LinkedIn  
+              </Button>
+              
+              <Button 
+                variant="outline" 
+                className="px-6 py-3 rounded-lg font-medium border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-colors"
+                onClick={() => window.open('https://github.com/DeenaKanth/', '_blank')}
+              >
+                <Github className="w-4 h-4 mr-2" />
+                GitHub
+              </Button>
+            </div>
+
+            <div className="flex items-center space-x-6 pt-4">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-gray-900">3+</div>
+                <div className="text-sm text-gray-600">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-gray-900">15+</div>
+                <div className="text-sm text-gray-600">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-gray-900">5+</div>
+                <div className="text-sm text-gray-600">Certifications</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative">
+              <div className="w-80 h-80 bg-gradient-to-br from-sky-500 to-sky-600 rounded-2xl p-1 shadow-2xl">
+                <img
+                  src="https://i.postimg.cc/CL1qkh6k/IMG-6940-Snapseed-Copy.jpg"
+                  alt="Deena Kanth Pitta"
+                  className="w-full h-full object-cover rounded-xl"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-gray-200">
+                <div className="text-center">
+                  <div className="text-lg font-bold text-gray-900">Available</div>
+                  <div className="text-sm text-sky-500">for opportunities</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Enhanced scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <button onClick={() => scrollToSection("about")} className="group flex flex-col items-center text-gray-600 hover:text-gray-700 transition-all duration-300 p-4 rounded-2xl hover:bg-white/60 backdrop-blur-sm">
-          <span className="text-sm mb-2 font-medium">Scroll down</span>
-          <div className="p-2 rounded-full border-2 border-current group-hover:scale-110 transition-transform duration-300">
-            <ArrowDown className="w-4 h-4" />
-          </div>
-        </button>
       </div>
     </section>
   );

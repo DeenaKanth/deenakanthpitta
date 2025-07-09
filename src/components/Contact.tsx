@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,21 +12,44 @@ const Contact = () => {
     email: "",
     message: ""
   });
-  const {
-    toast
-  } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon."
-    });
-    setFormData({
-      name: "",
-      email: "",
-      message: ""
-    });
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        'service_e96fvyr', // Service ID
+        'template_k3mdtsv', // Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        'w0i-y0Bbg8ysVoAvM' // Public Key
+      );
+
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon."
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        message: ""
+      });
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact me directly via email."
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -42,8 +66,8 @@ const Contact = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-50 border border-blue-200 rounded-lg flex items-center justify-center">
-                  <span className="text-blue-600 font-bold">📧</span>
+                <div className="w-12 h-12 bg-sky-50 border border-sky-200 rounded-lg flex items-center justify-center">
+                  <span className="text-sky-600 font-bold">📧</span>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Email</h3>
@@ -52,8 +76,8 @@ const Contact = () => {
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-50 border border-blue-200 rounded-lg flex items-center justify-center">
-                  <span className="text-blue-600 font-bold">📱</span>
+                <div className="w-12 h-12 bg-sky-50 border border-sky-200 rounded-lg flex items-center justify-center">
+                  <span className="text-sky-600 font-bold">📱</span>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Phone</h3>
@@ -77,7 +101,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">LinkedIn</h3>
-                  <a href="https://linkedin.com/in/deena-kanth-pitta" className="text-blue-600 hover:text-blue-500 hover:underline transition-colors">
+                  <a href="https://linkedin.com/in/deena-kanth-pitta" className="text-sky-500 hover:text-sky-400 hover:underline transition-colors">
                     linkedin.com/in/deena-kanth-pitta
                   </a>
                 </div>
@@ -103,7 +127,7 @@ const Contact = () => {
                   onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))} 
                   placeholder="Your full name" 
                   required 
-                  className="w-full bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-blue-500" 
+                  className="w-full bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-sky-500" 
                 />
               </div>
 
@@ -118,7 +142,7 @@ const Contact = () => {
                   onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))} 
                   placeholder="your.email@example.com" 
                   required 
-                  className="w-full bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-blue-500" 
+                  className="w-full bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-sky-500" 
                 />
               </div>
 
@@ -132,12 +156,16 @@ const Contact = () => {
                   onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))} 
                   placeholder="Tell me about your project or opportunity..." 
                   required 
-                  className="w-full h-32 bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-blue-500" 
+                  className="w-full h-32 bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-sky-500" 
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white border-0">
-                Send Message
+              <Button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="w-full bg-sky-500 hover:bg-sky-600 text-white border-0"
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>
