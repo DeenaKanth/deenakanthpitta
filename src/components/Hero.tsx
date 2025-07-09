@@ -8,7 +8,7 @@ const Hero = () => {
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 Hi, I'm{" "}
-                <span className="bg-gradient-to-r from-sky-500 to-sky-600 bg-clip-text text-transparent mx-[2px] px-[2px]">Deena Kanth Pitta </span>
+                <span className="bg-gradient-to-r from-sky-500 to-sky-600 bg-clip-text text-transparent mx-[2px] px-[2px]">Deena</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
                 Data Analytics Professional & Business Intelligence Specialist
